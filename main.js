@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "modal-landing": {
             title: "Modern Landing Page",
             desc: "A modern, responsive landing page built with HTML, CSS, and JavaScript. Features smooth animations, mobile-first design, and a clean, professional look. <br><br><strong>Features:</strong><ul><li>Responsive layout</li><li>Animated hero section</li><li>Call-to-action buttons</li></ul>",
-            link: "https://v1nch3ns0.github.io/landing/"
+            link: "https://v1nch3ns0.github.io/landing-page/"
         },
         "modal-portfolio": {
             title: "Portfolio Website",
