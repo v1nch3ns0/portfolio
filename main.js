@@ -75,4 +75,55 @@ document.addEventListener('DOMContentLoaded', () => {
     backToTopBtn.addEventListener('click', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
+
+    // Modal project details
+    const projectDetails = {
+        "modal-landing": {
+            title: "Modern Landing Page",
+            desc: "A modern, responsive landing page built with HTML, CSS, and JavaScript. Features smooth animations, mobile-first design, and a clean, professional look. <br><br><strong>Features:</strong><ul><li>Responsive layout</li><li>Animated hero section</li><li>Call-to-action buttons</li></ul>",
+            link: "https://v1nch3ns0.github.io/landing/"
+        },
+        "modal-portfolio": {
+            title: "Portfolio Website",
+            desc: "A personal portfolio website to showcase my projects, skills, and contact information. Built with accessibility and performance in mind.<br><br><strong>Features:</strong><ul><li>Project gallery with filters</li><li>Animated skill bars</li><li>Contact form</li></ul>",
+            link: "https://v1nch3ns0.github.io/portfolio/"
+        },
+        // Add more projects as needed
+    };
+
+    // Modal logic
+    const modal = document.getElementById('project-modal');
+    const modalBody = modal.querySelector('.modal-body');
+    const modalClose = modal.querySelector('.modal-close');
+    const modalBackdrop = modal.querySelector('.modal-backdrop');
+
+    document.querySelectorAll('.project-card[data-modal]').forEach(card => {
+        card.addEventListener('click', () => {
+            const modalKey = card.getAttribute('data-modal');
+            const info = projectDetails[modalKey];
+            if (info) {
+                modalBody.innerHTML = `
+                    <h3>${info.title}</h3>
+                    <p>${info.desc}</p>
+                    <a href="${info.link}" target="_blank" rel="noopener">Visit Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                `;
+                modal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+        });
+    });
+    function closeModal() {
+        modal.classList.add('closing');
+        setTimeout(() => {
+            modal.classList.remove('show', 'closing');
+            document.body.style.overflow = '';
+        }, 300); // Match the CSS animation duration
+    }
+    modalClose.addEventListener('click', closeModal);
+    modalBackdrop.addEventListener('click', closeModal);
+    document.addEventListener('keydown', e => {
+        if (modal.classList.contains('show') && (e.key === 'Escape' || e.key === 'Esc')) {
+            closeModal();
+        }
+    });
 });
