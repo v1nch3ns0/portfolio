@@ -1,4 +1,4 @@
-/* Reset and base styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -389,6 +389,84 @@ footer {
 }
 #back-to-top:hover {
     background: #3b82f6;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 300;
+    left: 0; top: 0; right: 0; bottom: 0;
+    align-items: center;
+    justify-content: center;
+}
+.modal.show {
+    display: flex;
+}
+.modal-content {
+    position: relative;
+    z-index: 302;
+    background: rgba(255,255,255,0.12);
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 48px rgba(99,102,241,0.22);
+    padding: 2.2rem 2rem 1.5rem 2rem;
+    max-width: 420px;
+    width: 90vw;
+    color: #fff;
+    backdrop-filter: blur(16px);
+    animation: modalPopIn 0.35s cubic-bezier(.77,0,.18,1);
+}
+.modal.closing .modal-content {
+    animation: modalPopOut 0.3s cubic-bezier(.77,0,.18,1) forwards;
+}
+@keyframes modalPopIn {
+    from { opacity: 0; transform: translateY(40px) scale(0.96);}
+    to { opacity: 1; transform: translateY(0) scale(1);}
+}
+@keyframes modalPopOut {
+    from { opacity: 1; transform: translateY(0) scale(1);}
+    to { opacity: 0; transform: translateY(40px) scale(0.96);}
+}
+.modal.closing .modal-backdrop {
+    animation: fadeOutBackdrop 0.3s forwards;
+}
+@keyframes fadeOutBackdrop {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+.modal-close {
+    position: absolute;
+    top: 1.1rem;
+    right: 1.3rem;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: color 0.2s;
+    z-index: 303;
+}
+.modal-close:hover {
+    color: #eebbc3;
+}
+.modal-body h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.6em;
+    color: #eebbc3;
+}
+.modal-body p {
+    font-size: 1.05rem;
+    color: #e0e7ff;
+    margin-bottom: 1.2em;
+}
+.modal-body a {
+    color: #6366f1;
+    font-weight: 600;
+    text-decoration: underline;
+    transition: color 0.2s;
+}
+.modal-body a:hover {
+    color: #eebbc3;
 }
 
 /* Responsive */
