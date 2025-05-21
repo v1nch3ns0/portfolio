@@ -78,16 +78,17 @@
                 <button class="filter-btn" data-filter="design">Design</button>
             </div>
             <div class="projects-grid">
-                <div class="project-card" data-category="web" data-aos="zoom-in">
+                <div class="project-card" data-category="web" data-modal="modal-landing">
                     <div class="project-icon"><i class="fa-solid fa-globe"></i></div>
                     <h3>Modern Landing Page</h3>
                     <p>A modern landing page built with HTML, CSS, and JavaScript.</p>
                 </div>
-                <div class="project-card" data-category="web" data-aos="zoom-in" data-aos-delay="100">
+                <div class="project-card" data-category="web" data-modal="modal-portfolio">
                     <div class="project-icon"><i class="fa-solid fa-user-astronaut"></i></div>
                     <h3>Portfolio Website</h3>
                     <p>Responsive portfolio website showcasing my work and skills.</p>
                 </div>
+
             </div>
         </section>
         <!-- Contact Section -->
@@ -107,6 +108,16 @@
             </form>
         </section>
     </main>
+    <!-- Project Modal -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close">&times;</button>
+            <div class="modal-body">
+                <!-- Filled dynamically -->
+            </div>
+        </div>
+        <div class="modal-backdrop"></div>
+    </div>
     <footer>
         <div class="footer-content">
             <span>© 2024 Vinchenso</span>
