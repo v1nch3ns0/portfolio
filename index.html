@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinchenso | Portfolio</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="logo">vinchenso</div>
+            <ul class="nav-links">
+                <li><a href="#about"><i class="fa-solid fa-user"></i> About</a></li>
+                <li><a href="#skills"><i class="fa-solid fa-bolt"></i> Skills</a></li>
+                <li><a href="#projects"><i class="fa-solid fa-diagram-project"></i> Projects</a></li>
+                <li><a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero-content" data-aos="fade-up">
+                <h1>Hi, I'm Vinchenso <span class="wave">👋</span></h1>
+                <p class="hero-sub">Front-End Developer</p>
+                <p class="hero-desc">
+                    I love creating cool and good looking websites
+                </p>
+                <a href="#projects" class="cta-btn">View Projects <i class="fa-solid fa-arrow-down"></i></a>
+            </div>
+            <div class="hero-bg"></div>
+        </section>
+        <!-- About Section -->
+        <section id="about" class="section card" data-aos="fade-up">
+            <h2><i class="fa-solid fa-user"></i> About</h2>
+            <p>
+                I'm Vinchenso, a teenager from England who loves to make websites. I am a self-taught
+                frontend developer. I am working on learning React and Node.js to become a full-stack
+                developer. You can contact me via the contact form below or through my social media links.
+            </p>
+        </section>
+        <!-- Skills Section -->
+        <section id="skills" class="section card" data-aos="fade-up">
+            <h2><i class="fa-solid fa-bolt"></i> Skills</h2>
+            <div class="skills-list">
+                <div class="skill">
+                    <span><i class="fa-brands fa-html5"></i> HTML</span>
+                    <div class="skill-bar"><div class="skill-level" data-skill="90"></div></div>
+                </div>
+                <div class="skill">
+                    <span><i class="fa-brands fa-css3-alt"></i> CSS</span>
+                    <div class="skill-bar"><div class="skill-level" data-skill="85"></div></div>
+                </div>
+                <div class="skill">
+                    <span><i class="fa-brands fa-js"></i> JavaScript</span>
+                    <div class="skill-bar"><div class="skill-level" data-skill="80"></div></div>
+                </div>
+                <div class="skill">
+                    <span><i class="fa-brands fa-react"></i> React</span>
+                    <div class="skill-bar"><div class="skill-level" data-skill="40"></div></div>
+                </div>
+                <div class="skill">
+                    <span><i class="fa-brands fa-node-js"></i> Node.js</span>
+                    <div class="skill-bar"><div class="skill-level" data-skill="30"></div></div>
+                </div>
+            </div>
+        </section>
+        <!-- Projects Section -->
+        <section id="projects" class="section card" data-aos="fade-up">
+            <h2><i class="fa-solid fa-diagram-project"></i> Projects</h2>
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="app">App</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" data-category="web" data-aos="zoom-in">
+                    <div class="project-icon"><i class="fa-solid fa-globe"></i></div>
+                    <h3>Modern Landing Page</h3>
+                    <p>A modern landing page built with HTML, CSS, and JavaScript.</p>
+                </div>
+                <div class="project-card" data-category="web" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="project-icon"><i class="fa-solid fa-user-astronaut"></i></div>
+                    <h3>Portfolio Website</h3>
+                    <p>Responsive portfolio website showcasing my work and skills.</p>
+                </div>
+                <div class="project-card" data-category="app" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="project-icon"><i class="fa-solid fa-list-check"></i></div>
+                    <h3>Task Manager App</h3>
+                    <p>Interactive web app for managing tasks and productivity.</p>
+                </div>
+                <div class="project-card" data-category="design" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="project-icon"><i class="fa-solid fa-palette"></i></div>
+                    <h3>UI Design Kit</h3>
+                    <p>Collection of reusable UI components and design assets.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section -->
+        <section id="contact" class="section card" data-aos="fade-up">
+            <h2><i class="fa-solid fa-envelope"></i> Contact</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Your Message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="cta-btn">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <span>© 2024 Vinchenso</span>
+            <span class="footer-social">
+                <a href="https://github.com/v1nch3ns0" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.youtube.com/@v1nch3ns0" aria-label="Youtube"><i class="fa-brands fa-youtube"></i></a>
+            </span>
+        </div>
+    </footer>
+    <button id="back-to-top" aria-label="Back to top">↑</button>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true });
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>
